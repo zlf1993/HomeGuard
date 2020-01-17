@@ -103,6 +103,10 @@ Basic Mode: led light means activating Ultrasonic in 30cm.
 Monitor Mode: monitor work all the time, whatever Ultrasonic is activated or not.
 
 ![avatar](./images/moniter.GIF)
+s
+Serv Control: assume camera connect to the top of the serve
+
+![avatar](./images/serv.GIF)
 
 Face Mode: After SSD find face/faces, information is uploaded to AWS then APP recieve the pictures. Face showing on APP as one picture.
 
