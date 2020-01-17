@@ -1,0 +1,6 @@
+a37i47xeh8qin6-ats.iot.us-east-2.amazonaws.com
+
+mosquitto_pub --cafile rootCA.pem --cert 26ebf42df6-certificate.pem.crt --key 26ebf42df6-private.pem.key -h a37i47xeh8qin6-ats.iot.us-east-2.amazonaws.com -p 8883 -q 1 -d -t my/topic -m '{"default":"first test from raspberry pi"}'
+
+https://drive.google.com/drive/folders/12ilLCJvXGdoMvSJ6pWSf7PLjaDSnKizI
+

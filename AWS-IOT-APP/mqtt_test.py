@@ -1,0 +1,39 @@
+import paho.mqtt.client as mqtt
+import json
+import sys
+
+cafile = "./root-CA.crt"
+cerfile = "./4a864e2ace-certificate.pem.crt"
+keyfile = "./4a864e2ace-private.pem.key"
+
+SERVER = "a37i47xeh8qin6-ats.iot.ca-central-1.amazonaws.com"
+PORT = 8883
+
+TOPIC = "iot/topic"
+QOS = 1
+
+message = {"default":"https://drive.google.com/drive/folders/12ilLCJvXGdoMvSJ6pWSf7PLjaDSnKizI?usp=sharing"}
+Data_Out = json.dumps(message)
+
+def on_connect(client, userdata, flags, rc):
+    print("Connect with result code " + str(rc))
+    
+def on_message(client, userdata, msg):
+    print(msg.topic + " " + str(msg.payload))
+ 
+# protocol='MQTTv31'
+    
+client = mqtt.Client(client_id="arn:aws:iot:ca-central-1:369639037617:thing/BlackPi", clean_session=False, userdata=None, transport="tcp")
+client.tls_set(cafile, cerfile, keyfile)
+client.on_connect = on_connect
+client.on_message = on_message
+
+client.connect(host=SERVER, port=PORT, keepalive=60, bind_address="")
+client.loop_start()
+
+
+
+client.loop_stop()
+client.disconnect()
+
+
