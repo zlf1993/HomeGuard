@@ -1,5 +1,5 @@
 # Home Guard
-Romote & Real time home security system using camera and sensors with raspberry Pi + Intel NCS2 + Arduino, sending and receiving information via AWS cloud.
+Romote & Real time home security system using camera and sensors with raspberry Pi + Intel NCS2 + Arduino, sending and receiving information via AWS cloud. This program was done by a group, **Longfei zeng, Shivam, Vaishali, Jay Patel, and Spoorthy**. Below are my works, my paterners done the others expansions about multi-sensers.
 
 ![avatar](./images/face.GIF)
 
